@@ -1,0 +1,10 @@
+### - with a body (to test 201 Created)
+post http://localhost:3000/register
+content-type: application/json
+
+{
+  "firstName": "baz"
+}
+
+### - with no body (to test 400 Bad Request)
+post http://localhost:3000/register
