@@ -3,8 +3,28 @@ post http://localhost:3000/register
 content-type: application/json
 
 {
-  "firstName": "baz"
+  "firstName": "Baz",
+  "lastName": "Murphy"
 }
 
-### - with no body (to test 400 Bad Request)
+### - with no firstName (to test 400 Bad Request)
 post http://localhost:3000/register
+content-type: application/json
+
+{
+  "lastName": "Murphy"
+}
+
+### - with no lastName (to test 400 Bad Request)
+post http://localhost:3000/register
+content-type: application/json
+
+{
+  "firstName": "Baz"
+}
+
+### - with no firstName and lastName (to test 400 Bad Request)
+post http://localhost:3000/register
+content-type: application/json
+
+{}
